@@ -7,6 +7,7 @@ import { EmptyFavorites } from "./empty-favorites";
 import { EmptySearch } from "./empty-search";
 import { Underdog } from "next/font/google";
 import { BoardCard } from "./board-card";
+import { NewBoardButton } from "./new-board-button";
 
 interface  BoardListProps {
     orgId: string;
@@ -26,7 +27,16 @@ export const BoardList = ({
     if (data === undefined) {
         return (
             <div>
-                Loading...
+                <h2 className="text-3xl">
+                    {query.favorites ? "Favorite Boards" : "Team Boards"}
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-5 mt-8 pb-10">
+                    <NewBoardButton orgId={orgId} disabled/>
+                    <BoardCard.Skeleton />
+                    <BoardCard.Skeleton />
+                    <BoardCard.Skeleton />
+                    <BoardCard.Skeleton />
+                </div>
             </div>
         )
     }
@@ -49,6 +59,7 @@ export const BoardList = ({
                 {query.favorites ? "Favorite Boards" : "Team Boards"}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-5 mt-8 pb-10">
+                <NewBoardButton orgId={orgId}/>
                 {data?.map((board)=>(
                     <BoardCard 
                      key = {board._id}
