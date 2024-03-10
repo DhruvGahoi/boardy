@@ -23,7 +23,7 @@ interface BoardCardProps {
 }
 
 export const BoardCard = ({
-    key,
+
     id,
     title,
     imageUrl,
