@@ -9,24 +9,24 @@ import {
     DialogClose,
     DialogFooter,
     DialogTitle
-} from "../ui/dialog"
+} from "@/components/ui/dialog"
 
-import { useRenameModal } from "@/store/use-rename-modal"
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/Button";
-import { useApiMutation } from "@/hooks/use-api-mutations";
-import { api } from "@/convex/_generated/api";
 import { toast } from "sonner";
+import { Input } from "@/components/ui/input";
+import { api } from "@/convex/_generated/api";
+import { Button } from "@/components/ui/Button";
+import { useRenameModal } from "@/store/use-rename-modal"
+import { useApiMutation } from "@/hooks/use-api-mutations";
 
 export const RenameModal = () => {
 
-    const { mutate, pending } = useApiMutation(api.board.title);
+    const { mutate, pending } = useApiMutation(api.board.update);
  
     const {
         isOpen,
         onClose,
         initialValues
-    } = useRenameModal()
+    } = useRenameModal();
 
     const [ title, setTitle ] = useState(initialValues.title)
 

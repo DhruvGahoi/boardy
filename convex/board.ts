@@ -52,7 +52,7 @@ export const remove = mutation({
     }
 })
 
-export const title = mutation({
+export const update = mutation({
     args : {
         id : v.id("boards"),
         title : v.string()

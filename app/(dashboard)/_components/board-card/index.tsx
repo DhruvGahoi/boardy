@@ -11,7 +11,6 @@ import { Actions } from "@/components/actions"
 import { Skeleton } from "@/components/ui/skeleton"
 
 interface BoardCardProps {
-    key: string
     id : string
     title : string
     imageUrl: string
@@ -23,7 +22,6 @@ interface BoardCardProps {
 }
 
 export const BoardCard = ({
-
     id,
     title,
     imageUrl,
@@ -70,7 +68,6 @@ export const BoardCard = ({
                  disabled = {false}
                 />
             </div>
-
         </Link>
     )
 }
