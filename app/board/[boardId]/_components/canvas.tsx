@@ -10,10 +10,10 @@ interface CanvasProps {
 
 export const Canvas = ({boardId} : CanvasProps) => {
     return (
-        <div className="h-screen w-full bg-neutral-100 touch-none">
+        <main className="h-screen w-full bg-neutral-100 touch-none">
             <Info />
             <Participant />
             <Toolbar />
-        </div>
+        </main>
     )
 }
