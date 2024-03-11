@@ -26,8 +26,8 @@ export const Actions = ({
     title
 } : ActionsProps) => {
     
-    const { onOpen } = useRenameModal();
     const { mutate, pending } = useApiMutation(api.board.remove)
+    const { onOpen } = useRenameModal();
 
     const onCopyLink = () => [
         navigator.clipboard.writeText(
