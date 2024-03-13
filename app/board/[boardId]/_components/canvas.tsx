@@ -1,7 +1,7 @@
 "use client"
 
 import { Info } from "./info"
-import { Participant } from "./participant"
+import { Participants } from "./participants"
 import { Toolbar } from "./toolbar"
 
 interface CanvasProps {
@@ -12,7 +12,7 @@ export const Canvas = ({boardId} : CanvasProps) => {
     return (
         <main className="h-screen w-full bg-neutral-100 touch-none">
             <Info />
-            <Participant />
+            <Participants />
             <Toolbar />
         </main>
     )
