@@ -5,7 +5,6 @@ import { api } from "@/convex/_generated/api";
 import { EmptyBoards } from "./empty-boards";
 import { EmptyFavorites } from "./empty-favorites";
 import { EmptySearch } from "./empty-search";
-import { Underdog } from "next/font/google";
 import { BoardCard } from "./board-card";
 import { NewBoardButton } from "./new-board-button";
 
@@ -22,7 +21,10 @@ export const BoardList = ({
     query
 }:BoardListProps) => {
 
-    const data = useQuery(api.boards.get, { orgId });
+    const data = useQuery(api.boards.get, { 
+        orgId, 
+        ...query,
+    });
 
     if (data === undefined) {
         return (
