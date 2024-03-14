@@ -2,7 +2,7 @@ import { createClient } from "@liveblocks/client";
 import { createRoomContext, createLiveblocksContext } from "@liveblocks/react";
   
 const client = createClient({
-  publicApiKey: "pk_dev_88Vbjpq5GdGsp56pLV2RegYNpnlm6xd5bQEbKfOTVmYHDJUUQpCFTHPcYgv0s4iP",
+  authEndpoint: "/api/liveblocks-auth",
 
   async resolveUsers({ userIds }) {
     // Used only for Comments and Notifications. Return a list of user information
