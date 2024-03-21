@@ -24,7 +24,7 @@ export async function POST(request : Request) {
 
     const room = await request.json();
 
-    const board = await convex.query(api.board.get, { id:room })
+    const board = await convex.query(api.board.get, { id: room })
 
     console.log("AUTH_INFO", {
         room,
