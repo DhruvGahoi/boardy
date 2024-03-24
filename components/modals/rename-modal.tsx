@@ -38,7 +38,7 @@ export const RenameModal = () => {
         e.preventDefault();
 
         mutate({
-            id: initialValues,
+            id: initialValues.id,
             title,
         })
          .then(()=>{
@@ -73,10 +73,10 @@ export const RenameModal = () => {
                             <Button type="button" variant="outline" >
                                 Cancel
                             </Button>
-                            <Button type="submit" disabled={pending}>
-                                Save
-                            </Button>
                         </DialogClose>
+                        <Button type="submit" disabled={pending}>
+                                    Save
+                        </Button>
                     </DialogFooter>
                 </form>
             </DialogContent>
