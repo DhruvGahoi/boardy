@@ -70,7 +70,8 @@ type UserMeta = {
   id?: string,  // Accessible through `user.id`
   info?: {
     name?: string,
-    image?: string
+    image?: string,
+    picture?: string
   },  // Accessible through `user.info`
 };
 
