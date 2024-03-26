@@ -1,6 +1,6 @@
 import { Plus } from "lucide-react";
 import { OrganizationProfile } from "@clerk/nextjs";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@radix-ui/react-dialog";
 
 export const InviteButton = () => {

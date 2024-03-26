@@ -14,7 +14,7 @@ import {
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { api } from "@/convex/_generated/api";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { useRenameModal } from "@/store/use-rename-modal"
 import { useApiMutation } from "@/hooks/use-api-mutations";
 

@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { useApiMutation } from "@/hooks/use-api-mutations";
 import { api } from "@/convex/_generated/api";
 import { ConfirmModal } from "@/components/confirm-modal";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { useRenameModal } from "@/store/use-rename-modal";
 
 interface ActionsProps {
